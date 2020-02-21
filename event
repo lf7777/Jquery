@@ -1,0 +1,48 @@
+语法:$(选择器).事件()
+
+文档就绪事件:
+$(document).ready(function(){
+    $('.p').hide();
+});
+简洁写法:
+$(function(){
+    $('.p').hide();
+});
+
+1.鼠标
+click 点击事件
+dblclick 双击事件
+
+mouseenter() 鼠标进入事件
+mouseleave() 鼠标离开时事件
+
+和mouseover()的区别:
+mouseover()在选取的元素及其子元素上都触发.而mouseenter()只在选的元素.
+
+hover()事件:两个函数用逗号隔开,如果指定一个函数,则进入离开都执行此.	
+$().hover(
+function(){},function(){}
+)
+
+2.键盘
+keypress() 键被按下的过程
+keydown() 键被按下的次数
+keyup 键被松开的次数
+
+3.表单
+submit() 当表单被提交
+change() input字段被改变,移开字段或者按下回车时的事件.可用于提示密码错误等.
+focus() 当input字段获得焦点时发生的事件.
+blur() 当input字段失去焦点时发生的事件.
+
+4.文档/窗口
+load() 当DOM完成载入时发生的事件.
+resize() 当浏览器窗口发生改变时发生的事件.
+scroll() 当元素或者window对象滚动时发生的事件(浏览器窗口)
+
+unload() 
+点击某个离开页面的链接
+在地址栏中键入了新的 URL
+使用前进或后退按钮
+关闭浏览器窗口
+重新加载页面

@@ -1,0 +1,40 @@
+jquery.min.js 百度2.1.4版本地址
+https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js
+
+
+query:查询
+引入jquery文件时,代表这些方法可以调用,当使用这些方法改变DOM对象的时候,可以写在对象结束的下面,同时也可以通过文档就绪事件,写入jquery代码.
+
+1.浏览器控制台查看jquery版本:
+$.fn.jquery
+
+2.jquery里可以使用css样式
+采用 css()方法.参数为 '属性','值'
+$('p').mouseenter(function(){
+    $('p').css('border','1px solid black')
+})
+
+3.jQuery方法链接:
+可以在同一个元素上通过.执行多条jQuery命令.
+
+4.noConflict()
+$.noConflict()
+会释放对$的控制,此时如果想用jQuery需要:
+jQuert(选择器).css()
+
+同理
+let j = $.noConflict()
+用 j 替代了 $
+
+在函数内使用:(传递给ready()函数)
+如果你的 jQuery 代码块使用 $ 简写，并且您不愿意改变这个快捷方式，那么您可以把 $ 符号作为变量传递给 ready 方法。这样就可以在函数内使用 $ 符号了 - 而在函数外，依旧不得不使用 "jQuery"：
+
+实例
+$.noConflict();
+jQuery(document).ready(function($){
+  $("button").click(function(){
+    $("p").text("jQuery 仍然在工作!");
+  });
+});
+
+

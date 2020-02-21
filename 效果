@@ -1,0 +1,11 @@
+hide() 隐藏
+show() 展示  参数为毫秒
+
+hide(1000,'linear','swing',function(){alert('已完成')})
+linear和swing表示过度使用哪种缓冲.
+第三个参数可以是完成隐藏事件后的事情.
+
+toggle()通过一个点击
+$('button').click(function(){
+	$('p').toggle();
+})
